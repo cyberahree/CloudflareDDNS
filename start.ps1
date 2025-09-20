@@ -28,4 +28,4 @@ docker build -t $ImageName .
 
 # Run the container with the env file
 Write-Host "Running Docker container '$ImageName' with env file '$EnvFile'..."
-docker run -d --env-file $EnvFile $ImageName --autostart
+docker run -d --env-file "$EnvFile" $ImageName
