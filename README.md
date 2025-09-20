@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ```
 
 4. Run it!!
-```py
+```bash
 # start with default timer (1800s) and no debug
 python main.py --autostart
 

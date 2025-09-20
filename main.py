@@ -7,7 +7,7 @@ import requests
 import logging
 import os
 
-DNS_RECORD = os.getenv("CLOUDFLARE_DNS_RECORD", "api.ahree.xyz")
+DNS_RECORD = os.getenv("CLOUDFLARE_DNS_RECORD")
 ZONE = extract(DNS_RECORD).top_domain_under_public_suffix
 
 class CloudflareDDNS:
@@ -21,7 +21,7 @@ class CloudflareDDNS:
 
         self._previousIP = "restart"
         self._cloudflare = Cloudflare(
-            api_token=os.getenv("CLOUDFLARE_API_TOKEN", "wGvp6vWST7ovqpE7O_dyD5yVWJKn2TTX9Y7ibn1a")
+            api_token=os.getenv("CLOUDFLARE_API_TOKEN")
         )
 
         self._collectRecords()
