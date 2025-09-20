@@ -21,4 +21,4 @@ EOL
 fi
 
 docker build -t $IMAGE_NAME .
-docker run -d --env-file "${ENV_FILE}" "${IMAGE_NAME}"
+docker run -d --env-file "${ENV_FILE}" "${IMAGE_NAME} --autostart"
