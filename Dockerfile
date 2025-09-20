@@ -9,6 +9,6 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ddns.py .
+COPY main.py .
 
-CMD ["python", "ddns.py", "--autostart"]
+CMD ["python", "main.py", "--autostart"]
