@@ -49,14 +49,3 @@ Use either `./start.sh` or `./start.ps1` (depending on your operating system, Li
 If a .env file does not already exist, one will be generated automatically; 
 Fill this out first before you run it again
 
-With Docker, the CLI options are passed after the image name:
-```docker
-# run with autostart and default timer
-docker run --env-file .env cloudflare-ddns --autostart
-
-# run with custom timer
-docker run --env-file .env cloudflare-ddns --autostart --timer 60
-
-# enable debug
-docker run --env-file .env cloudflare-ddns --autostart --debug True
-```
